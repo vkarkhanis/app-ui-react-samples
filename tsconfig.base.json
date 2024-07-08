@@ -15,11 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@app-ui-react-samples/Tree": ["libs/components/src/index.ts"],
-      "@app-ui-react-samples/SplitView": ["libs/components/src/index.ts"],
-      "@app-ui-react-samples/LeftPanel": ["libs/components/src/index.ts"],
-      "@app-ui-react-samples/RightPanel": ["libs/components/src/index.ts"],
-      "@app-ui-react-samples/Divider": ["libs/components/src/index.ts"]
+      "@app-ui-react-samples/shared-components": [
+        "libs/components/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

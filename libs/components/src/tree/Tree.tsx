@@ -50,6 +50,7 @@ const IconContainer = styled.div`
 const TreeStructureContainer = styled.div`
   display: flex;
   flex-direction: row;
+  width: 200px;
 `;
 
 const TreeNodeLabel = styled.a`

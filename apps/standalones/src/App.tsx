@@ -5,42 +5,39 @@ import {
   SplitView,
   Tree,
   TreeData,
-} from '@app-ui-react-samples/Tree';
+} from '@app-ui-react-samples/shared-components';
+import * as React from 'react';
+import styled from 'styled-components';
+import ViewFactory, { ViewName } from './components/ViewFactory';
+import { StandaloneAppsData } from './utils/OptionsData';
 
-const StandaloneAppsData: TreeData = {
-  label: 'React Examples',
-  key: '1',
-  icon: '',
-  childNodes: [
-    {
-      label: 'Elevator Simulation',
-      key: '2',
-      icon: '',
-    },
-    {
-      label: 'Prev Hook',
-      key: '3',
-      icon: '',
-    },
-    {
-      label: 'HoC demo',
-      key: '4',
-      icon: '',
-    },
-  ],
-};
+const RightPanelContainer = styled.div`
+  background-color: #d2d7c7;
+  flex: 1;
+  border-radius: 2%;
+  border: 5px solid #2f454b;
+`;
 
 const App = () => {
+  const [viewName, setViewName] = React.useState<ViewName>(
+    'ELEVATOR-SIMULATION'
+  );
+
   const onNodeSelect = (data: TreeData) => {
-    console.log('data selected: ', data.label);
+    setViewName(data.key as ViewName);
   };
+
   return (
     <SplitView>
       <LeftPanel>
         <Tree onNodeSelect={onNodeSelect} data={StandaloneAppsData} />
       </LeftPanel>
       <Divider />
-      <RightPanel>Main Content !!</RightPanel>
+      <RightPanelContainer>
+        <RightPanel>
+          <ViewFactory viewName={viewName} />
+        </RightPanel>
+      </RightPanelContainer>
     </SplitView>
   );
 };
