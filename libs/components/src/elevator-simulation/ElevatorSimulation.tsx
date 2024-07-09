@@ -1,3 +1,7 @@
+import {
+  CenteredColumnLayout,
+  CenteredRowLayout,
+} from '@app-ui-react-samples/common-styles';
 import { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 
@@ -51,21 +55,7 @@ const GroundFloor = styled(FloorModel)`
   margin-right: 10px;
 `;
 
-const CenterPanel = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const RowLayout = styled(CenterPanel)`
-  flex-direction: row;
-`;
-
-const ColumnLayout = styled(CenterPanel)`
-  flex-direction: column;
-`;
-
-const FloorModelContainer = styled(ColumnLayout)`
+const FloorModelContainer = styled(CenteredColumnLayout)`
   padding-bottom: 10px;
 `;
 
@@ -128,8 +118,8 @@ const ElevatorSimulation = () => {
   };
 
   return (
-    <ColumnLayout>
-      <RowLayout>
+    <CenteredColumnLayout>
+      <CenteredRowLayout>
         <CounterIn
           type="number"
           max={MaxFloor}
@@ -144,10 +134,10 @@ const ElevatorSimulation = () => {
           onClick={handleTraversal}
           disabled={!startTraversal}
         />
-      </RowLayout>
-      <RowLayout>
+      </CenteredRowLayout>
+      <CenteredRowLayout>
         <Floor>Floor: {currentFloor}</Floor>
-        <ColumnLayout>
+        <CenteredColumnLayout>
           <FloorModelContainer>
             {Array.from({ length: MaxFloor + 1 }, (_, index) => index).map(
               (eachValue) => {
@@ -167,9 +157,9 @@ const ElevatorSimulation = () => {
               }
             )}
           </FloorModelContainer>
-        </ColumnLayout>
-      </RowLayout>
-    </ColumnLayout>
+        </CenteredColumnLayout>
+      </CenteredRowLayout>
+    </CenteredColumnLayout>
   );
 };
 
