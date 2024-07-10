@@ -1,7 +1,7 @@
 import { CenterPanel, RowLayout } from '@app-ui-react-samples/common-styles';
 import { ChangeEvent, useReducer } from 'react';
 import styled from 'styled-components';
-import IcecreamCompositeHOC from './helper-components/IcecreamCompositeHoC';
+import IcecreamCompositeHOC from './helper-components/IcecreamCompositeHOC';
 import {
   Action,
   defaultToppings,
