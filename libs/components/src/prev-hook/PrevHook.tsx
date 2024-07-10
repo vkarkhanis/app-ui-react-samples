@@ -12,7 +12,7 @@ const Container = styled.div`
   margin-top: 10px;
 `;
 
-const Content = styled.div<{ backgroundColor?: string }>`
+const Content = styled(CenterPanel)<{ backgroundColor?: string }>`
   height: 200px;
   width: 200px;
   color: white;
