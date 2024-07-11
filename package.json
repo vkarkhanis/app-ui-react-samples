@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "npx nx serve standalones",
-    "build": "npx nx run-many -t build"
+    "start:standalones": "npx nx serve standalones",
+    "build": "npx nx run-many -t build -p apps/web/*",
+    "build:standalones": "npx nx run-many -t build -p apps/web/standalones"
   },
   "private": true,
   "dependencies": {

@@ -1,8 +1,8 @@
 # example netlify.toml
 [build]
-  command = "yarn run build"
+  command = "yarn run build:standalones"
   functions = "netlify/functions"
-  publish = "dist/apps/standalones"
+  publish = "dist/apps/web/standalones"
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.

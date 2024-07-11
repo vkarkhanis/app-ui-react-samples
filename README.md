@@ -89,3 +89,17 @@ It will show tasks that you can run with Nx.
 - [Join the community](https://nx.dev/community)
 - [Subscribe to the Nx Youtube Channel](https://www.youtube.com/@nxdevtools)
 - [Follow us on Twitter](https://twitter.com/nxdevtools)
+
+## Some useful nx CLI commands
+
+# Create new React app
+
+npx nx g @nx/react:app appName --directory=apps/web/appName
+
+# Remove React app
+
+npx nx g @nx/workspace:remove appName
+
+# Move React app
+
+npx nx g @nx/workspace:remove --projectName=appName --destination=<newDir>
