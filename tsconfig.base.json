@@ -15,10 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@app-ui-react-samples/common-styles": ["libs/styles/index.ts"],
       "@app-ui-react-samples/shared-components": [
         "libs/components/src/index.ts"
-      ],
-      "@app-ui-react-samples/common-styles": ["libs/styles/index.ts"]
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
