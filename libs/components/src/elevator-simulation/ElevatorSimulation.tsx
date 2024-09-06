@@ -66,7 +66,7 @@ const FloorContainer = styled.div<{ isCurrentFloor: boolean }>`
     isCurrentFloor ? 'red' : 'white'};
 `;
 
-const MaxFloor = 15;
+const MaxFloor = 16;
 let targetFloorBySelection = -1;
 
 const GroundFloorModel: React.FC<{ onClick: () => void }> = ({ onClick }) => (
